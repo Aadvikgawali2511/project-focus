@@ -1,0 +1,10 @@
+{
+  "name": "Project Focus",
+  "short_name": "Focus",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f2f5ef",
+  "theme_color": "#102b24",
+  "description": "A free, calm study focus timer.",
+  "icons": []
+}

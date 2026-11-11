@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102b24">
+  <meta name="description" content="A free, calm study focus timer.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>Project Focus</title>
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand-mark">F</div>
+      <div><div class="brand">PROJECT FOCUS</div><div class="tagline">Your time. Your goals. Your focus.</div></div>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☼</button>
+    </header>
+
+    <section class="greeting">
+      <p class="eyebrow">MAKE TODAY COUNT</p>
+      <h1>One session<br><span>at a time.</span></h1>
+      <p class="muted">Small focused steps add up.</p>
+    </section>
+
+    <section class="timer-card">
+      <div class="section-label">FOCUS SESSION</div>
+      <div class="ring" id="ring">
+        <div class="time-wrap">
+          <div class="time" id="time">25:00</div>
+          <div class="timer-state" id="timerState">READY TO FOCUS</div>
+        </div>
+      </div>
+      <div class="presets" id="presets">
+        <button data-min="15">15 min</button>
+        <button class="selected" data-min="25">25 min</button>
+        <button data-min="45">45 min</button>
+        <button data-min="60">60 min</button>
+      </div>
+      <label class="field-label" for="subject">WHAT ARE YOU STUDYING?</label>
+      <select id="subject">
+        <option>Mathematics</option><option>Science</option><option>English</option>
+        <option>Hindi</option><option>Social Studies</option><option>Coding</option><option>Other</option>
+      </select>
+      <div class="actions">
+        <button class="primary" id="startBtn">▶ &nbsp; Start focus</button>
+        <button class="secondary" id="resetBtn" aria-label="Reset timer">↻</button>
+      </div>
+      <p class="tiny">Tip: Put your phone on Do Not Disturb before starting.</p>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat"><div class="stat-icon">◷</div><div class="stat-number" id="todayMinutes">0</div><div class="stat-caption">MINUTES TODAY</div></article>
+      <article class="stat"><div class="stat-icon">✓</div><div class="stat-number" id="todaySessions">0</div><div class="stat-caption">SESSIONS TODAY</div></article>
+      <article class="stat"><div class="stat-icon">⚡</div><div class="stat-number" id="allSessions">0</div><div class="stat-caption">TOTAL SESSIONS</div></article>
+    </section>
+
+    <section class="history-card">
+      <div class="history-head"><div><div class="section-label">YOUR PROGRESS</div><h2>Recent sessions</h2></div><button id="clearBtn" class="text-btn">Clear</button></div>
+      <div id="history" class="history-empty">Your completed sessions will appear here.</div>
+    </section>
+    <footer>FREE TO FOCUS · NO ADS · NO SUBSCRIPTIONS</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
